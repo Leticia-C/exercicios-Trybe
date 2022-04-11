@@ -60,21 +60,9 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  // Adicione o código do exercício aqui:
-  const expectedResult = [
-    'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-    'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-    'Fundação - Ficção Científica - Isaac Asimov',
-    'Duna - Ficção Científica - Frank Herbert',
-    'A Coisa - Terror - Stephen King',
-    'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
-  ];
-  
-  function formatedBookNames() {
-    const arrayVazio = [];
-    const namesOfTheBooks = books.map((bookInfo) => {arrayVazio.push(`${bookInfo.name} ${bookInfo.genre} ${bookInfo. author.name}`);});
-    return arrayVazio;
+   
+  function formatedBookNames(autores) {
+   return autores.map((item) => `${item.name} - ${item.genre} - ${item.author.name}`)
   };
  
   console.log(formatedBookNames(books)) ; 
